@@ -54,6 +54,10 @@ def getLenders(loan_id, page=1):
     return __make_call('loans/%s/lenders.json?page=%i' % (str(loan_id), page),
                        'lenders', getLenders, [loan_id])
 
+def getPartners(page=1):
+    return __make_call('partners.json?page=%i' % (page),
+                       'partners', getPartners)
+
 def getJournalEntries(loan_id, include_bulk=True, page=1):
     ib = include_bulk and 1 or 0
     return __make_call('loans/%s/journal_entries.json?page=%i&include_bulk=%s' % (str(loan_id), page, ib),
