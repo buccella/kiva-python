@@ -1,5 +1,5 @@
 import urllib2
-import simplejson as json
+import json
 from types import *
 from datetime import datetime
 from urlparse import urljoin
